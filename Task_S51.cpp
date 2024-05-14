@@ -1,8 +1,8 @@
-/*Программа, в которой функция reverse() принимает строку и выводит ее на экран в отраженном виде*/
+/*РџСЂРѕРіСЂР°РјРјР°, РІ РєРѕС‚РѕСЂРѕР№ С„СѓРЅРєС†РёСЏ reverse() РїСЂРёРЅРёРјР°РµС‚ СЃС‚СЂРѕРєСѓ Рё РІС‹РІРѕРґРёС‚ РµРµ РЅР° СЌРєСЂР°РЅ РІ РѕС‚СЂР°Р¶РµРЅРЅРѕРј РІРёРґРµ*/
 
 #include <iostream>
 #include <cstring>
-#include <cstdio> // для gets()
+#include <cstdio> // РґР»СЏ gets()
 using namespace std;
 
 void reverse(char str[100])
@@ -13,14 +13,14 @@ void reverse(char str[100])
     end = &str[len-1];
 
     while (start < end){
-        // обменяем символы
+        // РѕР±РјРµРЅСЏРµРј СЃРёРјРІРѕР»С‹
         char t = *start;
         *start = *end;
         *end = t;
         start++;
         end--;
     }
-    cout << "Перевёрнутая: " << str << endl;
+    cout << "РџРµСЂРµРІС‘СЂРЅСѓС‚Р°СЏ: " << str << endl;
  }
 
 int main()
@@ -28,9 +28,9 @@ int main()
     setlocale(0, "RUS");
 
     char str[100];
-    cout << "Введите строку: " << endl; // делаем запрос
-    gets(str); // ввод строки с помощью функции gets()
-    cout << "Исходная: " << str << endl;
+    cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: " << endl; // РґРµР»Р°РµРј Р·Р°РїСЂРѕСЃ
+    gets(str); // РІРІРѕРґ СЃС‚СЂРѕРєРё СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё gets()
+    cout << "РСЃС…РѕРґРЅР°СЏ: " << str << endl;
     reverse(str);
 
     return 0;
